@@ -1,6 +1,6 @@
 {
   "name": "@acastellon/ws-dns",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "WS DNS system (Ad-hoc Discovery WS system)",
   "main": "index.js",
   "scripts": {
