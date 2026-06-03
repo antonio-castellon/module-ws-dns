@@ -23,5 +23,10 @@
   "homepage": "https://github.com/antonio-castellon/module-ws-dns#readme",
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ]
 }
