@@ -1,0 +1,27 @@
+{
+  "name": "@acastellon/ws-dns",
+  "version": "1.0.0",
+  "description": "WS DNS system (Ad-hoc Discovery WS system)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"no test\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonio-castellon/module-ws-dns.git"
+  },
+  "keywords": [
+    "dns",
+    "discovery",
+    "ws"
+  ],
+  "author": "Antonio Castellon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antonio-castellon/module-ws-dns/issues"
+  },
+  "homepage": "https://github.com/antonio-castellon/module-ws-dns#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
