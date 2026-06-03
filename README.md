@@ -12,6 +12,32 @@ Typical REST/WS endpoints a full implementation should expose (versioned):
 - `GET /:version/get/:service_id` → returns { service: { PROTOCOL, IP_OR_CNAME, PORT, METHOD } } or error
 - `POST /:version/set/:service_id` with body { PROTOCOL, PORT, METHOD } → registers the service address
 
+**Example server skeleton (what you would implement):**
+
+```js
+const express = require('express');
+const app = express();
+
+app.use(express.json());
+
+const services = {}; // or use a real store
+
+app.get('/:version/ping', (req, res) => res.sendStatus(200));
+
+app.get('/:version/get/:service_id', (req, res) => {
+  const svc = services[req.params.service_id];
+  if (svc) res.json({ service: svc });
+  else res.status(404).json({ error: 'not found' });
+});
+
+app.post('/:version/set/:service_id', (req, res) => {
+  services[req.params.service_id] = req.body;
+  res.sendStatus(201);
+});
+
+app.listen(7777, () => console.log('WS DNS server stub running'));
+```
+
 ## Install
 
 ```bash
